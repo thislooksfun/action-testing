@@ -6,9 +6,11 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.PAT_EVENT_DISPATCH }}
-          event-type: tlf-custom-event
-          client-payload: '{"foo": "bar"}'
+      - name: Get Branch
+        run: echo ${{ github.ref }}
+#       - name: Repository Dispatch
+#         uses: peter-evans/repository-dispatch@v1
+#         with:
+#           token: ${{ secrets.PAT_EVENT_DISPATCH }}
+#           event-type: tlf-custom-event
+#           client-payload: '{"foo": "bar"}'
