@@ -1,13 +1,13 @@
-name: Consume Event (bar)
+name: Consume Event (all)
 
 on:
   repository_dispatch:
     types:
-      tlf-custom-event:
-        foo: bar
+      - tlf-custom-event
 
 jobs:
-  dispatch:
+  consume_bar:
+    if: github.event.client_payload.foo == "bar"
     runs-on: ubuntu-latest
     steps:
       - name: It worked!
