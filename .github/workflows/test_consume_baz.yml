@@ -1,0 +1,12 @@
+name: Consume Event (baz)
+
+on:
+  tlf-custom-event:
+    foo: baz
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: It worked!
+        run: echo 'yay!'
