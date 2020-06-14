@@ -1,0 +1,13 @@
+name: Consume Event (all)
+
+on:
+  repository_dispatch:
+    types:
+      - tlf-custom-event
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: It worked!
+        run: echo 'yay!'
