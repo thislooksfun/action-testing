@@ -13,4 +13,5 @@ jobs:
       - run: |
           echo 'branch: ${{ github.event.client_payload.branch }}'
           echo 'ref: ${{ github.ref }}'
-          echo 'sha: ${{ github.sha }}'
+          echo 'sha1: ${{ github.sha }}'
+          echo 'sha2: ${{ github.event.client_payload.sha }}'
