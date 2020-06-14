@@ -11,6 +11,6 @@ jobs:
     steps:
       - run: echo 'it worked!'
       - run: |
-          echo '1: ${{ github.event.client_payload.branch }}'
-          echo '2: ${{ github.ref }}'
-          echo '3: ${GITHUB_REF##*/}'
+          echo 'branch: ${{ github.event.client_payload.branch }}'
+          echo 'ref: ${{ github.ref }}'
+          echo 'sha: ${{ github.sha }}'
