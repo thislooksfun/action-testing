@@ -1,4 +1,4 @@
-name: Consume Event (all)
+name: Consume Event (bar)
 
 on:
   repository_dispatch:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   consume_bar:
-    if: github.event.client_payload.foo == "bar"
+    if: github.event.client_payload.foo == 'bar'
     runs-on: ubuntu-latest
     steps:
       - name: It worked!
