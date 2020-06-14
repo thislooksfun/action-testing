@@ -1,4 +1,4 @@
-name: Consume Event (all)
+name: Consume Event (any)
 
 on:
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
       - tlf-custom-event
 
 jobs:
-  dispatch:
+  consume_any:
     runs-on: ubuntu-latest
     steps:
       - name: It worked!
