@@ -1,8 +1,10 @@
 name: Consume Event (baz)
 
 on:
-  tlf-custom-event:
-    foo: baz
+  repository_dispatch:
+    types:
+      tlf-custom-event:
+        foo: baz
 
 jobs:
   dispatch:
