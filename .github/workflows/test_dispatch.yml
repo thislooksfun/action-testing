@@ -11,4 +11,4 @@ jobs:
         with:
           token: ${{ secrets.PAT_EVENT_DISPATCH }}
           event-type: tlf-custom-event
-          payload: '{"foo": "bar"}'
+          client-payload: '{"foo": "bar"}'
