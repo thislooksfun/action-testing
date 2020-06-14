@@ -1,8 +1,10 @@
 name: Consume Event (bar)
 
 on:
-  tlf-custom-event:
-    foo: bar
+  repository_dispatch:
+    types:
+      tlf-custom-event:
+        foo: bar
 
 jobs:
   dispatch:
