@@ -13,4 +13,4 @@ jobs:
         with:
           token: ${{ secrets.PAT_EVENT_DISPATCH }}
           event-type: tlf-custom-event
-          client-payload: '{"branch": "${{ env.BRANCH_NAME }}"}'
+          client-payload: '{"branch": "${{ env.BRANCH_NAME }}", "sha": "${{ github.sha }}"}'
