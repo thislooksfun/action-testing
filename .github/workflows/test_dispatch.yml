@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Branch
-        run: echo ${{ github.ref }}
+        run: echo ${GITHUB_REF##*/}
 #       - name: Repository Dispatch
 #         uses: peter-evans/repository-dispatch@v1
 #         with:
