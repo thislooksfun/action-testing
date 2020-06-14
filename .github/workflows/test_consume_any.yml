@@ -9,5 +9,8 @@ jobs:
   consume_any:
     runs-on: ubuntu-latest
     steps:
-      - name: It worked!
-        run: echo 'yay!'
+      - run: echo 'it worked!'
+      - run: |
+          echo '1: ${{ github.event.client_payload.branch }}'
+          echo '2: ${{ github.ref }}'
+          echo '3: ${GITHUB_REF##*/}'
